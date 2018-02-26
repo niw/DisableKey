@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		54CFE8C32044720A007C3F76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54CFE8C22044720A007C3F76 /* AppDelegate.m */; };
-		54CFE8C52044720A007C3F76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54CFE8C42044720A007C3F76 /* Assets.xcassets */; };
 		54CFE8C82044720A007C3F76 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54CFE8C62044720A007C3F76 /* MainMenu.xib */; };
 		54CFE8CB2044720A007C3F76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54CFE8CA2044720A007C3F76 /* main.m */; };
 		54CFE8D4204472CC007C3F76 /* EventTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 54CFE8D3204472CC007C3F76 /* EventTap.m */; };
@@ -19,7 +18,6 @@
 		54CFE8BE2044720A007C3F76 /* DisableKey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DisableKey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54CFE8C12044720A007C3F76 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		54CFE8C22044720A007C3F76 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		54CFE8C42044720A007C3F76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54CFE8C72044720A007C3F76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		54CFE8C92044720A007C3F76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54CFE8CA2044720A007C3F76 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -39,6 +37,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		545435BE20449AA500FCADC4 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				54CFE8C12044720A007C3F76 /* AppDelegate.h */,
+				54CFE8C22044720A007C3F76 /* AppDelegate.m */,
+				54CFE8D2204472CC007C3F76 /* EventTap.h */,
+				54CFE8D3204472CC007C3F76 /* EventTap.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		545435BF20449AB100FCADC4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				54CFE8D52044747D007C3F76 /* StatusItem.pdf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		54CFE8B52044720A007C3F76 = {
 			isa = PBXGroup;
 			children = (
@@ -58,15 +75,11 @@
 		54CFE8C02044720A007C3F76 /* DisableKey */ = {
 			isa = PBXGroup;
 			children = (
-				54CFE8C12044720A007C3F76 /* AppDelegate.h */,
-				54CFE8C22044720A007C3F76 /* AppDelegate.m */,
-				54CFE8D2204472CC007C3F76 /* EventTap.h */,
-				54CFE8D3204472CC007C3F76 /* EventTap.m */,
-				54CFE8D52044747D007C3F76 /* StatusItem.pdf */,
-				54CFE8C42044720A007C3F76 /* Assets.xcassets */,
-				54CFE8C62044720A007C3F76 /* MainMenu.xib */,
+				545435BE20449AA500FCADC4 /* Classes */,
 				54CFE8C92044720A007C3F76 /* Info.plist */,
 				54CFE8CA2044720A007C3F76 /* main.m */,
+				54CFE8C62044720A007C3F76 /* MainMenu.xib */,
+				545435BF20449AB100FCADC4 /* Resources */,
 			);
 			path = DisableKey;
 			sourceTree = "<group>";
@@ -128,7 +141,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54CFE8C52044720A007C3F76 /* Assets.xcassets in Resources */,
 				54CFE8D62044747D007C3F76 /* StatusItem.pdf in Resources */,
 				54CFE8C82044720A007C3F76 /* MainMenu.xib in Resources */,
 			);
