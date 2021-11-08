@@ -7,16 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		54A15D8C2073FE7600D0DCD5 /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 54A15D8B2073FE7600D0DCD5 /* AppIcon.icns */; };
+		54C504062738E59100E46A78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54C504052738E59100E46A78 /* Assets.xcassets */; };
 		54CFE8C32044720A007C3F76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54CFE8C22044720A007C3F76 /* AppDelegate.m */; };
 		54CFE8C82044720A007C3F76 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54CFE8C62044720A007C3F76 /* MainMenu.xib */; };
 		54CFE8CB2044720A007C3F76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54CFE8CA2044720A007C3F76 /* main.m */; };
 		54CFE8D4204472CC007C3F76 /* EventTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 54CFE8D3204472CC007C3F76 /* EventTap.m */; };
-		54CFE8D62044747D007C3F76 /* StatusItem.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 54CFE8D52044747D007C3F76 /* StatusItem.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		54A15D8B2073FE7600D0DCD5 /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = "<group>"; };
+		54C504052738E59100E46A78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54CFE8BE2044720A007C3F76 /* DisableKey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DisableKey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54CFE8C12044720A007C3F76 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		54CFE8C22044720A007C3F76 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -25,7 +24,6 @@
 		54CFE8CA2044720A007C3F76 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		54CFE8D2204472CC007C3F76 /* EventTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTap.h; sourceTree = "<group>"; };
 		54CFE8D3204472CC007C3F76 /* EventTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTap.m; sourceTree = "<group>"; };
-		54CFE8D52044747D007C3F76 /* StatusItem.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = StatusItem.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,9 +59,8 @@
 		545435BF20449AB100FCADC4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				54A15D8B2073FE7600D0DCD5 /* AppIcon.icns */,
+				54C504052738E59100E46A78 /* Assets.xcassets */,
 				54CFE8C62044720A007C3F76 /* MainMenu.xib */,
-				54CFE8D52044747D007C3F76 /* StatusItem.pdf */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -152,9 +149,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54CFE8D62044747D007C3F76 /* StatusItem.pdf in Resources */,
 				54CFE8C82044720A007C3F76 /* MainMenu.xib in Resources */,
-				54A15D8C2073FE7600D0DCD5 /* AppIcon.icns in Resources */,
+				54C504062738E59100E46A78 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
