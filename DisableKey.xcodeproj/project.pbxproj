@@ -39,21 +39,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		545435BE20449AA500FCADC4 /* Classes */ = {
+		545435BE20449AA500FCADC4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				54CFE8C12044720A007C3F76 /* AppDelegate.h */,
 				54CFE8C22044720A007C3F76 /* AppDelegate.m */,
 				54CFE8D2204472CC007C3F76 /* EventTap.h */,
 				54CFE8D3204472CC007C3F76 /* EventTap.m */,
+				54CFE8CA2044720A007C3F76 /* main.m */,
 			);
-			path = Classes;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		545435BF20449AB100FCADC4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				54A15D8B2073FE7600D0DCD5 /* AppIcon.icns */,
+				54CFE8C62044720A007C3F76 /* MainMenu.xib */,
 				54CFE8D52044747D007C3F76 /* StatusItem.pdf */,
 			);
 			path = Resources;
@@ -78,11 +80,9 @@
 		54CFE8C02044720A007C3F76 /* DisableKey */ = {
 			isa = PBXGroup;
 			children = (
-				545435BE20449AA500FCADC4 /* Classes */,
 				54CFE8C92044720A007C3F76 /* Info.plist */,
-				54CFE8CA2044720A007C3F76 /* main.m */,
-				54CFE8C62044720A007C3F76 /* MainMenu.xib */,
 				545435BF20449AB100FCADC4 /* Resources */,
+				545435BE20449AA500FCADC4 /* Sources */,
 			);
 			path = DisableKey;
 			sourceTree = "<group>";
