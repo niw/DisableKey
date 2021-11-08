@@ -39,6 +39,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		544E23972738E43000B29B28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		545435BE20449AA500FCADC4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +73,7 @@
 			children = (
 				54CFE8C02044720A007C3F76 /* DisableKey */,
 				54CFE8BF2044720A007C3F76 /* Products */,
+				544E23972738E43000B29B28 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
