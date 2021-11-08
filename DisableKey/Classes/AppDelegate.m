@@ -11,7 +11,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-static int64_t kInternalKeyboardType = 58;
+static int64_t kInternalKeyboardTypes[] = {
+    58,
+    91  // MacBook Pro (M1, 2021)
+};
 
 @interface AppDelegate () <EventTapDelegate>
 
@@ -60,11 +63,13 @@ static int64_t kInternalKeyboardType = 58;
 - (CGEventRef)eventTap:(EventTap *)eventTap didTapEvent:(CGEventRef)event
 {
     const int64_t keyboardType = CGEventGetIntegerValueField(event, kCGKeyboardEventKeyboardType);
-    if (keyboardType == kInternalKeyboardType) {
-        return NULL;
-    } else {
-        return event;
+    const size_t internalKeyboardTypesCount = sizeof(kInternalKeyboardTypes) / sizeof(int64_t);
+    for (size_t index = 0; index < internalKeyboardTypesCount; index++) {
+        if (keyboardType == kInternalKeyboardTypes[index]) {
+            return NULL;
+        }
     }
+    return event;
 }
 
 @end
