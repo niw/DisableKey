@@ -50,7 +50,7 @@ static int64_t kInternalKeyboardTypes[] = {
 
     CFDictionaryRef options = (__bridge CFDictionaryRef)@{(__bridge NSString *)kAXTrustedCheckOptionPrompt: @YES};
     if (AXIsProcessTrustedWithOptions(options)) {
-        const CGEventMask eventMask = CGEventMaskBit(kCGEventKeyDown) | CGEventMaskBit(kCGEventKeyUp) | CGEventMaskBit(kCGEventFlagsChanged);
+        const CGEventMask eventMask = CGEventMaskBit(kCGEventKeyDown) | CGEventMaskBit(kCGEventKeyUp) | CGEventMaskBit(kCGEventFlagsChanged) | CGEventMaskBit(NX_SYSDEFINED);
         EventTap * const eventTap = [[EventTap alloc] initWithEventMask:eventMask];
         eventTap.delegate = self;
         eventTap.enabled = YES;
@@ -62,6 +62,11 @@ static int64_t kInternalKeyboardTypes[] = {
 
 - (CGEventRef)eventTap:(EventTap *)eventTap didTapEvent:(CGEventRef)event
 {
+    NSEvent * const nsEvent = [NSEvent eventWithCGEvent:event];
+    if (nsEvent.type == NSEventTypeSystemDefined && nsEvent.subtype == NX_SUBTYPE_AUX_CONTROL_BUTTONS) {
+        return NULL;
+    }
+
     const int64_t keyboardType = CGEventGetIntegerValueField(event, kCGKeyboardEventKeyboardType);
     const size_t internalKeyboardTypesCount = sizeof(kInternalKeyboardTypes) / sizeof(int64_t);
     for (size_t index = 0; index < internalKeyboardTypesCount; index++) {
