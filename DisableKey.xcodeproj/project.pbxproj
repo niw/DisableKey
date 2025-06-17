@@ -3,28 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		54C504062738E59100E46A78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54C504052738E59100E46A78 /* Assets.xcassets */; };
-		54CFE8C32044720A007C3F76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54CFE8C22044720A007C3F76 /* AppDelegate.m */; };
-		54CFE8C82044720A007C3F76 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54CFE8C62044720A007C3F76 /* MainMenu.xib */; };
-		54CFE8CB2044720A007C3F76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54CFE8CA2044720A007C3F76 /* main.m */; };
-		54CFE8D4204472CC007C3F76 /* EventTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 54CFE8D3204472CC007C3F76 /* EventTap.m */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
-		54C504052738E59100E46A78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54CFE8BE2044720A007C3F76 /* DisableKey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DisableKey.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		54CFE8C12044720A007C3F76 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		54CFE8C22044720A007C3F76 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		54CFE8C72044720A007C3F76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		54CFE8C92044720A007C3F76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		54CFE8CA2044720A007C3F76 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		54CFE8D2204472CC007C3F76 /* EventTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTap.h; sourceTree = "<group>"; };
-		54CFE8D3204472CC007C3F76 /* EventTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTap.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		54271ADF2E014C4500152567 /* DisableKey */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = DisableKey;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		54CFE8BB2044720A007C3F76 /* Frameworks */ = {
@@ -44,33 +36,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		545435BE20449AA500FCADC4 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				54CFE8C12044720A007C3F76 /* AppDelegate.h */,
-				54CFE8C22044720A007C3F76 /* AppDelegate.m */,
-				54CFE8D2204472CC007C3F76 /* EventTap.h */,
-				54CFE8D3204472CC007C3F76 /* EventTap.m */,
-				54CFE8CA2044720A007C3F76 /* main.m */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		545435BF20449AB100FCADC4 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				54C504052738E59100E46A78 /* Assets.xcassets */,
-				54CFE8C62044720A007C3F76 /* MainMenu.xib */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		54CFE8B52044720A007C3F76 = {
 			isa = PBXGroup;
 			children = (
-				54CFE8C02044720A007C3F76 /* DisableKey */,
-				54CFE8BF2044720A007C3F76 /* Products */,
+				54271ADF2E014C4500152567 /* DisableKey */,
 				544E23972738E43000B29B28 /* Frameworks */,
+				54CFE8BF2044720A007C3F76 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,16 +51,6 @@
 				54CFE8BE2044720A007C3F76 /* DisableKey.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		54CFE8C02044720A007C3F76 /* DisableKey */ = {
-			isa = PBXGroup;
-			children = (
-				54CFE8C92044720A007C3F76 /* Info.plist */,
-				545435BF20449AB100FCADC4 /* Resources */,
-				545435BE20449AA500FCADC4 /* Sources */,
-			);
-			path = DisableKey;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,6 +67,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				54271ADF2E014C4500152567 /* DisableKey */,
 			);
 			name = DisableKey;
 			productName = DisableKey;
@@ -127,7 +91,6 @@
 				};
 			};
 			buildConfigurationList = 54CFE8B92044720A007C3F76 /* Build configuration list for PBXProject "DisableKey" */;
-			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -135,6 +98,7 @@
 				Base,
 			);
 			mainGroup = 54CFE8B52044720A007C3F76;
+			preferredProjectObjectVersion = 77;
 			productRefGroup = 54CFE8BF2044720A007C3F76 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -149,8 +113,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54CFE8C82044720A007C3F76 /* MainMenu.xib in Resources */,
-				54C504062738E59100E46A78 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,24 +123,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54CFE8D4204472CC007C3F76 /* EventTap.m in Sources */,
-				54CFE8CB2044720A007C3F76 /* main.m in Sources */,
-				54CFE8C32044720A007C3F76 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		54CFE8C62044720A007C3F76 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				54CFE8C72044720A007C3F76 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		54CFE8CD2044720A007C3F76 /* Debug */ = {
@@ -288,7 +236,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = DisableKey/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = at.niw.DisableKey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -300,7 +251,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = DisableKey/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = at.niw.DisableKey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
