@@ -29,11 +29,14 @@ static int64_t kInternalKeyboardTypes[] = {
 {
     NSStatusBar * const statusBar = [NSStatusBar systemStatusBar];
     NSStatusItem * const statusItem = [statusBar statusItemWithLength:NSVariableStatusItemLength];
-    statusItem.highlightMode = YES;
+    // NOTE: This `highlightsBy` that is alternative to the deprecated
+    // `statusItem.highlightMode = YES` may be not necessary anymore.
+    NSButtonCell * const statusItemButtonCell = (NSButtonCell *)statusItem.button.cell;
+    statusItemButtonCell.highlightsBy = NSContentsCellMask | NSChangeBackgroundCellMask;
 
     NSImage * const statusItemImage = [NSImage imageNamed:@"StatusItem"];
     statusItemImage.template = YES;
-    statusItem.image = statusItemImage;
+    statusItem.button.image = statusItemImage;
 
     NSMenu * const statusMenu = [[NSMenu alloc] init];
 
