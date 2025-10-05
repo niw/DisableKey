@@ -1,0 +1,17 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "STATUS_MENU_ITEM_QUIT_MENU_ITEM" : {
+      "comment" : "A status menu item to terminate the application.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quit"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.1"
+}

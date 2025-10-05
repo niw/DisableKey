@@ -41,7 +41,7 @@ static int64_t kInternalKeyboardTypes[] = {
     NSMenu * const statusMenu = [[NSMenu alloc] init];
 
     NSMenuItem * const quitMenuItem = [[NSMenuItem alloc] init];
-    quitMenuItem.title = @"Quit";
+    quitMenuItem.title = NSLocalizedString(@"STATUS_MENU_ITEM_QUIT_MENU_ITEM", @"A status menu item to terminate the application.");
     quitMenuItem.keyEquivalent = @"q";
     quitMenuItem.keyEquivalentModifierMask = NSEventModifierFlagCommand;
     quitMenuItem.action = @selector(terminate:);
