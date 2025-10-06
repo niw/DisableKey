@@ -11,6 +11,17 @@
           }
         }
       }
+    },
+    "STATUS_MENU_ITEM_WAITING_MENU_ITEM" : {
+      "comment" : "A status menu item appears when the application is waiting Accessibility Access.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Waiting Accessibility Access…"
+          }
+        }
+      }
     }
   },
   "version" : "1.1"

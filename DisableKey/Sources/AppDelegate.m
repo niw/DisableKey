@@ -51,14 +51,54 @@ static int64_t kInternalKeyboardTypes[] = {
 
     self.statusItem = statusItem;
 
-    CFDictionaryRef options = (__bridge CFDictionaryRef)@{(__bridge NSString *)kAXTrustedCheckOptionPrompt: @YES};
-    if (AXIsProcessTrustedWithOptions(options)) {
-        const CGEventMask eventMask = CGEventMaskBit(kCGEventKeyDown) | CGEventMaskBit(kCGEventKeyUp) | CGEventMaskBit(kCGEventFlagsChanged) | CGEventMaskBit(NX_SYSDEFINED);
-        EventTap * const eventTap = [[EventTap alloc] initWithEventMask:eventMask];
-        eventTap.delegate = self;
-        eventTap.enabled = YES;
-        self.eventTap = eventTap;
+    // Start event tap when the process is trusted.
+    if ([self _main_startEventTapIfTrustedPrompt:YES]) {
+        return;
+    } else {
+        NSMenuItem * const separatorMenuItem = [NSMenuItem separatorItem];
+        [statusMenu insertItem:separatorMenuItem atIndex:0];
+
+        NSMenuItem * const waitingMenuItem = [[NSMenuItem alloc] init];
+        waitingMenuItem.title = NSLocalizedString(@"STATUS_MENU_ITEM_WAITING_MENU_ITEM", @"A status menu item appears when the application is waiting Accessibility Access.");
+        [statusMenu insertItem:waitingMenuItem atIndex:0];
+
+        __weak typeof (self) weakSelf = self;
+        [NSTimer scheduledTimerWithTimeInterval:1.0 repeats:YES block:^(NSTimer *timer) {
+            typeof (self) const strongSelf = weakSelf;
+            if (!strongSelf) {
+                return;
+            }
+
+            if (![strongSelf _main_startEventTapIfTrustedPrompt:NO]) {
+                return;
+            }
+
+            [statusMenu removeItem:separatorMenuItem];
+            [statusMenu removeItem:waitingMenuItem];
+
+            [timer invalidate];
+        }];
     }
+}
+
+- (BOOL)_main_startEventTapIfTrustedPrompt:(BOOL)prompt
+{
+    if (self.eventTap) {
+        return YES;
+    }
+
+    CFDictionaryRef const options = (__bridge CFDictionaryRef)@{(__bridge NSString *)kAXTrustedCheckOptionPrompt: @(prompt)};
+    if (!AXIsProcessTrustedWithOptions(options)) {
+        return NO;
+    }
+
+    const CGEventMask eventMask = CGEventMaskBit(kCGEventKeyDown) | CGEventMaskBit(kCGEventKeyUp) | CGEventMaskBit(kCGEventFlagsChanged) | CGEventMaskBit(NX_SYSDEFINED);
+    EventTap * const eventTap = [[EventTap alloc] initWithEventMask:eventMask];
+    eventTap.delegate = self;
+    eventTap.enabled = YES;
+    self.eventTap = eventTap;
+
+    return YES;
 }
 
 // MARK: - EventTapDelegate
